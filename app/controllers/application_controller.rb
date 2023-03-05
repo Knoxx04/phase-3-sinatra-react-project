@@ -32,17 +32,17 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
-#   # Update an existing user
-#   put '/api/v1/users/:id' do
-#     content_type :json
-#     user = User.find(params[:id])
-#     if user.update(params[:user])
-#       user.to_json
-#     else
-#       status 400
-#       { error: "Failed to update user" }.to_json
-#     end
-#   end
+  # Update an existing user
+  put '/api/v1/users/:id' do
+    content_type :json
+    user = User.find(params[:id])
+    if user.update(params[:user])
+      user.to_json
+    else
+      status 400
+      { error: "Failed to update user" }.to_json
+    end
+  end
 
 #   # Delete an existing user
 #   delete '/api/v1/users/:id' do
