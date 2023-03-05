@@ -12,6 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2023_03_05_180003) do
 
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "details"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "full_name"
     t.string "email"

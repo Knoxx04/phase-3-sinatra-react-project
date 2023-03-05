@@ -18,7 +18,7 @@ gem "rack-cors", "~> 1.1"
 
 # An object-relational mapper
 # https://guides.rubyonrails.org/active_record_basics.html
-gem "activerecord", "~> 6.1"
+gem "activerecord", "~> 7.0"
 
 # Configures common Rake tasks for working with Active Record
 # https://github.com/sinatra-activerecord/sinatra-activerecord
@@ -50,3 +50,5 @@ group :test do
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
 end
+
+gem "faker", "~> 2.19"
