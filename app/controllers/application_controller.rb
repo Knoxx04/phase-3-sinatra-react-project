@@ -44,20 +44,20 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-#   # Delete an existing user
-#   delete '/api/v1/users/:id' do
-#     content_type :json
-#     user = User.find(params[:id])
-#     user.destroy
-#     { message: "User deleted successfully" }.to_json
-#   end
+  # Delete an existing user
+  delete '/api/v1/users/:id' do
+    content_type :json
+    user = User.find(params[:id])
+    user.destroy
+    { message: "User deleted successfully" }.to_json
+  end
 
-#   # List all projects for a specific user
-#   get '/api/v1/users/:user_id/projects' do
-#     content_type :json
-#     projects = User.find(params[:user_id]).projects
-#     projects.to_json
-#   end
+  # List all projects for a specific user
+  get '/api/v1/users/:user_id/projects' do
+    content_type :json
+    projects = User.find(params[:user_id]).projects
+    projects.to_json
+  end
 
 #   # Create a new project for a specific user
 #   post '/api/v1/users/:user_id/projects' do
