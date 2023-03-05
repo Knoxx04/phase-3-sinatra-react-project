@@ -25,12 +25,12 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-#   # Get details of a specific user
-#   get '/api/v1/users/:id' do
-#     content_type :json
-#     user = User.find(params[:id])
-#     user.to_json
-#   end
+  # Get details of a specific user
+  get '/api/v1/users/:id' do
+    content_type :json
+    user = User.find(params[:id])
+    user.to_json
+  end
 
 #   # Update an existing user
 #   put '/api/v1/users/:id' do
