@@ -12,18 +12,18 @@ class ApplicationController < Sinatra::Base
     User.all.to_json
   end
 
-#   # Create a new user
-#   post '/api/v1/users' do
-#     content_type :json
-#     user = User.new(params[:user])
-#     if user.save
-#       status 201
-#       user.to_json
-#     else
-#       status 400
-#       { error: "Failed to create user" }.to_json
-#     end
-#   end
+  # Create a new user
+  post '/api/v1/users' do
+    content_type :json
+    user = User.new(params[:user])
+    if user.save
+      status 201
+      user.to_json
+    else
+      status 400
+      { error: "Failed to create user" }.to_json
+    end
+  end
 
 #   # Get details of a specific user
 #   get '/api/v1/users/:id' do
