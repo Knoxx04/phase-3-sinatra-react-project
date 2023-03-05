@@ -6,11 +6,11 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
-#   # List all users
-#   get '/api/v1/users' do
-#     content_type :json
-#     User.all.to_json
-#   end
+  # List all users
+  get '/api/v1/users' do
+    content_type :json
+    User.all.to_json
+  end
 
 #   # Create a new user
 #   post '/api/v1/users' do
