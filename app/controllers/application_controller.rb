@@ -59,47 +59,47 @@ class ApplicationController < Sinatra::Base
     projects.to_json
   end
 
-#   # Create a new project for a specific user
-#   post '/api/v1/users/:user_id/projects' do
-#     content_type :json
-#     user = User.find(params[:user_id])
-#     project = user.projects.new(params[:project])
-#     if project.save
-#       status 201
-#       project.to_json
-#     else
-#       status 400
-#       { error: "Failed to create project" }.to_json
-#     end
-#   end
+  # Create a new project for a specific user
+  post '/api/v1/users/:user_id/projects' do
+    content_type :json
+    user = User.find(params[:user_id])
+    project = user.projects.new(params[:project])
+    if project.save
+      status 201
+      project.to_json
+    else
+      status 400
+      { error: "Failed to create project" }.to_json
+    end
+  end
 
-#   # Get details of a specific project for a specific user
-#   get '/api/v1/users/:user_id/projects/:id' do
-#     content_type :json
-#     project = User.find(params[:user_id]).projects.find(params[:id])
-#     project.to_json
-#   end
+  # Get details of a specific project for a specific user
+  get '/api/v1/users/:user_id/projects/:id' do
+    content_type :json
+    project = User.find(params[:user_id]).projects.find(params[:id])
+    project.to_json
+  end
 
-#   # Update an existing project for a specific user
-#   put '/api/v1/users/:user_id/projects/:id' do
-#     content_type :json
-#     project = User.find(params[:user_id]).projects.find(params[:id])
-#     if project.update(params[:project])
-#       project.to_json
-#     else
-#       status 400
-#       { error: "Failed to update project" }.to_json
-#     end
-#   end
+  # Update an existing project for a specific user
+  put '/api/v1/users/:user_id/projects/:id' do
+    content_type :json
+    project = User.find(params[:user_id]).projects.find(params[:id])
+    if project.update(params[:project])
+      project.to_json
+    else
+      status 400
+      { error: "Failed to update project" }.to_json
+    end
+  end
 
-#   # Delete an existing project for a specific user
-#   delete '/api/v1/users/:user_id/projects/:id' do
-#     content_type :json
-#     project = User.find(params[:user_id]).projects.find(params[:id])
-#     project.destroy
-#     { message: "Project deleted successfully" }.to_json
-#   end
-# end
+  # Delete an existing project for a specific user
+  delete '/api/v1/users/:user_id/projects/:id' do
+    content_type :json
+    project = User.find(params[:user_id]).projects.find(params[:id])
+    project.destroy
+    { message: "Project deleted successfully" }.to_json
+  end
+end
 
 
 
