@@ -16,7 +16,7 @@ puts "users seeded"
 
 
 projects = []
-10.times do
+100.times do
   new_project = Project.create(
     name: Faker::Company.name,
     details: Faker::Lorem.paragraph,
