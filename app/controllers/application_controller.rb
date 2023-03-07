@@ -55,6 +55,15 @@ end
   end
   
 
+  post '/login' do
+    full_name = params[:full_name]
+    password = params[:password]
+  
+    # TODO: Authenticate the user with the provided credentials
+  
+   
+  
+
 
 
 end
