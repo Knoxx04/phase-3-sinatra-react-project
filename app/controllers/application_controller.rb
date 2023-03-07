@@ -1,3 +1,4 @@
+
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -54,16 +55,6 @@ end
     projects.update(name: params[:name], details: params[:details])
   end
   
-
-  post '/login' do
-    full_name = params[:full_name]
-    password = params[:password]
-  
-    # TODO: Authenticate the user with the provided credentials
-  
-   
-  
-
 
 
 end
